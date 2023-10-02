@@ -1,0 +1,46 @@
+.bg-main {
+  background-color: $main-color;
+}
+
+.bg-dark {
+  background-color: rgb(56, 47, 236);
+}
+
+.bg-light {
+  background-color: hsl(0, 0%, 100%);
+}
+
+.py-1 {
+  padding: 1em;
+}
+
+.py-2 {
+  padding: 2em;
+}
+
+.py-3 {
+  padding: 3em;
+}
+
+.py-4 {
+  padding: 4em;
+}
+
+.txt-light {
+  color: hsl(241, 100%, 89%);
+}
+
+%btn {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  padding: 15px;
+  border-radius: 30px;
+}
+
+
+.btn-dark {
+  @extend %btn;
+  background: hsl(224, 30%, 27%);
+  color: #fff;
+}

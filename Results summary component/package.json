@@ -1,0 +1,14 @@
+{
+  "name": "custom_web",
+  "version": "1.0.0",
+  "description": "Custom web project",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css --recursive"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^9.0.0"
+  }
+}

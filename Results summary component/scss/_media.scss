@@ -1,0 +1,19 @@
+@media (max-width: $main-width) {
+  .summary {
+    grid-template-columns: repeat(1, 1fr);
+    min-height: $main-height-landscape;
+    overflow: auto;
+    border-bottom: 5px solid rgb(48, 59, 89);
+    border-radius: 0;
+
+    &-a {
+      border-radius: 0 0 30px 30px;
+    }
+  }
+}
+
+@media screen and (max-height: $main-height) {
+  .container {
+    display: block;
+  }
+}
