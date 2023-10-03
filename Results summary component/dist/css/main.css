@@ -53,11 +53,7 @@ button[class^='btn-']:hover {
 
 .container {
   background-color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 100vh; }
+  display: block; }
 
 .summary {
   display: grid;
@@ -142,6 +138,10 @@ button[class^='btn-']:hover {
     .summary-a {
       border-radius: 0 0 30px 30px; } }
 
-@media screen and (max-height: 430px) {
+@media (min-width: 600px) and (min-height: 430px) {
   .container {
-    display: block; } }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh; } }

@@ -12,8 +12,12 @@
   }
 }
 
-@media screen and (max-height: $main-height) {
+@media (min-width: $main-width) and (min-height: $main-height) {
   .container {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
   }
 }

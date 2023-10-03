@@ -26,11 +26,7 @@ button[class^='btn-']:hover {
 
 .container {
   background-color: $main-color;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
+  display: block;
 }
 
 .summary {
