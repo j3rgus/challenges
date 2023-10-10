@@ -1,0 +1,128 @@
+:root {
+  --desktop-width: 1440px;
+  --mobile-width: 375px;
+  --primary-very-dark-magenta: hsl(300, 43%, 22%);
+  --primary-soft-pink: hsl(333, 80%, 67%);
+  --neutral-dark-grayish-magenta: hsl(303, 10%, 53%);
+  --neutral-light-rayish-magenta: hsl(300, 24%, 96%);
+  --neutral-white: hsl(0, 0%, 100%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 15px;
+  background: var(--neutral-white);
+/*  line-height: 1.6;*/
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 4.4rem;
+  line-height: 1.0;
+  word-spacing: -8px;
+}
+
+p {
+  font-weight: 400;
+  font-size: 1.4rem;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+ul {
+  list-style: none;
+}
+
+#social-proof {
+  display: grid;
+  grid-template-areas:
+    "title ratings"
+    "reviews reviews";
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  width: 76%;
+  height: 84%;
+  margin: 8% 12%;
+}
+
+#social-proof > .title {
+  grid-area: title;
+  border: 1px solid #000;
+}
+
+#social-proof > .title > h2 {
+  width: 600px;
+  color: var(--primary-very-dark-magenta);
+}
+
+#social-proof > .title > p {
+  width: 550px;
+  opacity: 0.7;
+  margin-top: 40px;
+}
+
+#social-proof > .ratings {
+  grid-area: ratings;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+/*  border: 1px solid #000;*/
+}
+
+#social-proof > .ratings > div {
+  display: flex;
+  flex-direction: row;
+  width: 85%;
+  background: var(--neutral-light-rayish-magenta);
+  padding: 30px 25px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+#social-proof > .ratings > div:first-child {
+  align-self: start;
+}
+
+#social-proof > .ratings > div:last-child {
+  align-self: end;
+}
+
+#social-proof > .ratings ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 30%;
+  padding-right: 35px;
+}
+
+#social-proof > .ratings h3 {
+  color: var(--primary-very-dark-magenta);
+}
+
+#social-proof > .reviews {
+  grid-area: reviews;
+  border: 1px solid #000;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
