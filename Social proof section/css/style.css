@@ -24,7 +24,7 @@ body {
 
 h2 {
   font-weight: 700;
-  font-size: 5rem;
+  font-size: 4rem;
   line-height: 0.8;
   word-spacing: -8px;
 }
@@ -35,7 +35,7 @@ h3 {
 
 p {
   font-weight: 400;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 
 main {
@@ -68,12 +68,12 @@ ul {
 }
 
 #social-proof>.title>h2 {
-  max-width: 60%;
+  max-width: 70%;
   color: var(--primary-very-dark-magenta);
 }
 
 #social-proof>.title>p {
-  max-width: 70%;
+  max-width: 65%;
   font-weight: 500;
   color: var(--primary-very-dark-magenta);
   opacity: 0.7;
@@ -95,7 +95,7 @@ ul {
   align-items: center;
   width: 85%;
   background: var(--neutral-light-rayish-magenta);
-  padding: 35px 30px;
+  padding: 20px 15px;
   border-radius: 10px;
 }
 
@@ -120,7 +120,7 @@ ul {
 }
 
 #social-proof>.ratings>.ratings-box h3 {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   color: var(--primary-very-dark-magenta);
 }
 
