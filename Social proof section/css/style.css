@@ -1,11 +1,11 @@
 :root {
   --desktop-width: 1440px;
   --mobile-width: 375px;
-  --primary-very-dark-magenta: hsl(300, 43%, 22%);
-  --primary-soft-pink: hsl(333, 80%, 67%);
-  --neutral-dark-grayish-magenta: hsl(303, 10%, 53%);
-  --neutral-light-rayish-magenta: hsl(300, 24%, 96%);
-  --neutral-white: hsl(0, 0%, 100%);
+  --primary-very-dark-magenta: hsl(300deg 43% 22%);
+  --primary-soft-pink: hsl(333deg 80% 67%);
+  --neutral-dark-grayish-magenta: hsl(303deg 10% 53%);
+  --neutral-light-rayish-magenta: hsl(300deg 24% 96%);
+  --neutral-white: hsl(0deg 0% 100%);
 }
 
 * {
@@ -17,15 +17,20 @@
 body {
   font-family: 'League Spartan', sans-serif;
   font-size: 15px;
-  background: var(--neutral-white);
-/*  line-height: 1.6;*/
+  background:
+    url('../images/bg-pattern-top-desktop.svg') no-repeat top left / 38%,
+    url('../images/bg-pattern-bottom-desktop.svg') no-repeat bottom right / 70%;
 }
 
 h2 {
   font-weight: 700;
-  font-size: 4.4rem;
-  line-height: 1.0;
+  font-size: 5rem;
+  line-height: 0.8;
   word-spacing: -8px;
+}
+
+h3 {
+  font-weight: 700;
 }
 
 p {
@@ -47,61 +52,62 @@ ul {
 
 #social-proof {
   display: grid;
-  grid-template-areas:
-    "title ratings"
-    "reviews reviews";
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
+  grid-template:
+    "title ratings" 1fr "reviews reviews" 1fr / 1fr 1fr;
   gap: 30px;
   width: 76%;
   height: 84%;
   margin: 8% 12%;
 }
 
-#social-proof > .title {
+#social-proof>.title {
   grid-area: title;
-  border: 1px solid #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-#social-proof > .title > h2 {
-  width: 600px;
+#social-proof>.title>h2 {
+  max-width: 60%;
   color: var(--primary-very-dark-magenta);
 }
 
-#social-proof > .title > p {
-  width: 550px;
+#social-proof>.title>p {
+  max-width: 70%;
+  font-weight: 500;
+  color: var(--primary-very-dark-magenta);
   opacity: 0.7;
   margin-top: 40px;
 }
 
-#social-proof > .ratings {
+#social-proof>.ratings {
   grid-area: ratings;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-/*  border: 1px solid #000;*/
+  gap: 20px;
 }
 
-#social-proof > .ratings > div {
+#social-proof>.ratings>.ratings-box {
   display: flex;
   flex-direction: row;
+  align-items: center;
   width: 85%;
   background: var(--neutral-light-rayish-magenta);
-  padding: 30px 25px;
-  margin-bottom: 15px;
+  padding: 35px 30px;
   border-radius: 10px;
 }
 
-#social-proof > .ratings > div:first-child {
+#social-proof>.ratings>.ratings-box:first-child {
   align-self: start;
 }
 
-#social-proof > .ratings > div:last-child {
+#social-proof>.ratings>.ratings-box:last-child {
   align-self: end;
 }
 
-#social-proof > .ratings ul {
+#social-proof>.ratings>.ratings-box ul {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -109,13 +115,68 @@ ul {
   padding-right: 35px;
 }
 
-#social-proof > .ratings h3 {
+#social-proof>.ratings>.ratings-box ul img {
+  width: 20px;
+}
+
+#social-proof>.ratings>.ratings-box h3 {
+  font-size: 1.6rem;
   color: var(--primary-very-dark-magenta);
 }
 
-#social-proof > .reviews {
+#social-proof>.reviews {
   grid-area: reviews;
-  border: 1px solid #000;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#social-proof>.reviews>.reviews-box {
+  background: var(--primary-very-dark-magenta);
+  width: 31%;
+  min-height: 75%;
+  padding: 3rem;
+  border-radius: 14px;
+}
+
+#social-proof>.reviews>.reviews-box>p {
+  color: var(--neutral-white);
+  opacity: 0.9;
+}
+
+
+#social-proof>.reviews>.reviews-box>.reviews-box-title {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+#social-proof>.reviews>.reviews-box:first-child {
+  align-self: start;
+}
+
+#social-proof>.reviews>.reviews-box:last-child {
+  align-self: end;
+}
+
+#social-proof>.reviews .reviews-box-title>img {
+  width: 50px;
+  border-radius: 50%;
+}
+
+#social-proof>.reviews .reviews-box-title>ul h3 {
+  color: var(--neutral-white);
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+#social-proof>.reviews .reviews-box-title>ul p {
+  color: var(--primary-soft-pink);
+  font-size: 1.2rem;
+  font-weight: 500;
+  opacity: 0.7;
 }
 
 .attribution {
@@ -124,5 +185,5 @@ ul {
 }
 
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: hsl(228deg 45% 44%);
 }

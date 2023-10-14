@@ -1,10 +1,10 @@
 :root {
   --main-width: 330px;
   --main-height: 500px;
-  --main-white: hsl(0, 0%, 100%);
-  --main-light-gray: hsl(212, 45%, 89%);
-  --main-grayish-blue: hsl(220, 15%, 55%);
-  --main-dark-blue: hsl(218, 44%, 22%);
+  --main-white: hsl(0deg 0% 100%);
+  --main-light-gray: hsl(212deg 45% 89%);
+  --main-grayish-blue: hsl(220deg 15% 55%);
+  --main-dark-blue: hsl(218deg 44% 22%);
 }
 
 * {
@@ -14,7 +14,7 @@
 }
 
 body {
-  font-family: 'Outfit', sans-serif;
+  font-family: Outfit, sans-serif;
   background: var(--main-light-gray);
   text-align: center;
 }
@@ -51,14 +51,15 @@ p {
 
 .attribution {
   font-size: 11px;
-/*  text-align: center;*/
+
+  /*  text-align: center; */
 }
 
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: hsl(228deg 45% 44%);
 }
 
-@media (min-width: 330px) and (min-height: 500px) {
+@media (width >=330px) and (height >=500px) {
   body {
     display: flex;
     justify-content: center;

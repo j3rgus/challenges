@@ -4,11 +4,16 @@
   "description": "Custom web project",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass -w scss/ -o dist/css --recursive"
+    "sass": "node-sass -w scss/ -o dist/css --recursive",
+    "stylelint": "npx stylelint \"**/*.scss\""
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "node-sass": "^9.0.0"
+  },
+  "devDependencies": {
+    "stylelint": "^15.10.3",
+    "stylelint-config-standard-scss": "^11.0.0"
   }
 }

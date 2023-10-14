@@ -1,0 +1,50 @@
+h2 {
+  font-size: 3rem;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+body {
+  background: var(--neutral-white);
+}
+
+#social-proof {
+  grid-template:
+    "title" auto
+    "ratings" auto
+    "reviews" auto
+    "reviews" auto / minmax(300px, 1fr);
+  gap: 50px;
+}
+
+#social-proof>.title {
+  align-items: center;
+  text-align: center;
+}
+
+#social-proof>.ratings>.ratings-box {
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+#social-proof>.ratings>.ratings-box ul {
+  width: 100%;
+  justify-content: center;
+  gap: 15px;
+}
+
+#social-proof>.reviews {
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 400px;
+  gap: 30px;
+}
+
+#social-proof>.reviews>.reviews-box {
+  width: 100%;
+}

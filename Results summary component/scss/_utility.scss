@@ -3,11 +3,11 @@
 }
 
 .bg-dark {
-  background-color: rgb(56, 47, 236);
+  background-color: rgb(56 47 236);
 }
 
 .bg-light {
-  background-color: hsl(0, 0%, 100%);
+  background-color: hsl(0deg 0% 100%);
 }
 
 .py-1 {
@@ -27,7 +27,7 @@
 }
 
 .txt-light {
-  color: hsl(241, 100%, 89%);
+  color: hsl(241deg 100% 89%);
 }
 
 %btn {
@@ -41,6 +41,7 @@
 
 .btn-dark {
   @extend %btn;
-  background: hsl(224, 30%, 27%);
+
+  background: hsl(224deg 30% 27%);
   color: #fff;
 }
