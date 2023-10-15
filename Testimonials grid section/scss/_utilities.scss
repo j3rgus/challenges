@@ -1,0 +1,48 @@
+@import 'variables';
+
+// Set text color
+@function set-text-color($color) {
+  @if (lightness($color) > 60) {
+    @return $primary-very-dark-grayish-blue;
+  }
+
+  @else {
+    @return $primary-white;
+  }
+}
+
+.theme {
+  &-primary {
+    background-color: $primary-moderate-violet;
+    color: set-text-color($primary-moderate-violet);
+  }
+
+  &-dark {
+    background-color: $primary-very-dark-blackish-blue;
+    color: set-text-color($primary-very-dark-blackish-blue);
+  }
+
+  &-medium {
+    background-color: $primary-very-dark-grayish-blue;
+    color: set-text-color($primary-very-dark-grayish-blue);
+  }
+
+  &-light {
+    background-color: $primary-white;
+    color: set-text-color($primary-white);
+  }
+}
+
+.main-author {
+  border: 2px solid rgba($primary-white, 0.3);
+}
+
+.fade {
+  &-light {
+    opacity: 0.7;
+  }
+
+  &-medium {
+    opacity: 0.5;
+  }
+}
