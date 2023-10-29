@@ -1,0 +1,151 @@
+/* stylelint-disable no-invalid-position-at-import-rule,import-notation */
+@import "variables";
+@import "utility";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 18px;
+  font-family: "Bai Jamjuree", sans-serif;
+  max-width: $main-width;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2 {
+  margin-bottom: 1rem;
+}
+
+h3 {
+  margin-bottom: 0.5rem;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+  color: $dark-grayish-blue;
+}
+
+p {
+  font-weight: 400;
+  line-height: 1.6;
+  font-size: 13px;
+  color: $grayish-blue;
+}
+
+ul {
+  list-style: none;
+}
+
+main,
+section,
+.buttons {
+  padding: 2rem 0;
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  background: url("../img/bg-header-desktop.png") no-repeat center center/cover;
+
+  & img {
+    width: 60px;
+  }
+}
+
+.features {
+  display: flex;
+  height: 500px;
+
+  & img {
+    height: 100%;
+    width: 50%;
+  }
+
+  &-list {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+    gap: 20px;
+    padding: 4rem;
+  }
+}
+
+.devices {
+  & img {
+    display: block;
+    margin: auto;
+    width: 60%;
+  }
+}
+
+.workflow {
+  &-list {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    gap: 2rem;
+    padding: 3rem;
+
+    & ul {
+      width: 33%;
+    }
+
+    & img {
+      width: 30px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.partners {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  padding: 2rem;
+
+  & img {
+    width: 100px;
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 80px;
+  background-color: $grayish-blue-light;
+
+  &-logo img {
+    width: 40px;
+  }
+
+  &-menu {
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+    gap: 5px 2rem;
+  }
+
+  &-socials {
+    display: flex;
+    gap: 1em;
+
+    & img {
+      width: 80%;
+    }
+  }
+}
+
+@import "media";

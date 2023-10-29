@@ -1,0 +1,33 @@
+.container {
+  width: 50%;
+  text-align: center;
+  margin: auto;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+%btn-base {
+  display: block;
+  padding: 10px 20px;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 12px;
+}
+
+.btn {
+  &-primary {
+    @extend %btn-base;
+
+    background-color: $strong-cyan;
+  }
+
+  &-secondary {
+    @extend %btn-base;
+
+    background-color: $light-blue;
+  }
+}

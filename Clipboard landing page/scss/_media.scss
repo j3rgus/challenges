@@ -1,0 +1,59 @@
+@media (max-width: $mobile-width) {
+  body {
+    font-size: 22px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .heading {
+    background: url("../img/bg-header-mobile.png") no-repeat center center/cover;
+  }
+
+  .features {
+    flex-direction: column;
+    height: 800px;
+
+    & img {
+      width: 100%;
+      padding: 0 2rem;
+    }
+
+    &-list {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  .workflow {
+    &-list {
+      flex-direction: column;
+      align-items: center;
+
+      & ul {
+        width: 80%;
+      }
+    }
+  }
+
+  .partners {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    height: 300px;
+
+    &-menu {
+      grid-template: repeat(5, 1fr) / repeat(1, 1fr);
+    }
+  }
+}
