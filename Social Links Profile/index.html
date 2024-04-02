@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Frontend Mentor | Social links profile</title>
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            inter: ["Inter", "sans-serif"],
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <main>
+      <article
+        class="flex items-center justify-center min-h-screen bg-zinc-900 font-inter text-center text-white"
+      >
+        <div class="bg-zinc-800 p-6 mx-6 rounded-xl">
+          <div class="flex items-center justify-center mb-4">
+            <img
+              src="assets/images/avatar-jessica.jpeg"
+              alt=""
+              class="w-16 rounded-full"
+            />
+          </div>
+          <p class="text-lg mb-1">Jessica Randall</p>
+          <p class="text-green-400 text-xs">London, United Kingdom</p>
+          <div class="my-3">
+            <p class="px-3 text-xs text-zinc-400">
+              "Front-end developer and avid reader."
+            </p>
+          </div>
+          <div class="flex flex-col space-y-3 cursor-default text-xs">
+            <button class="py-2 bg-zinc-700 rounded-lg hover:bg-zinc-950">
+              GitHub
+            </button>
+            <button class="py-2 bg-zinc-700 rounded-lg hover:bg-zinc-950">
+              Frontend
+            </button>
+            <button class="py-2 bg-zinc-700 rounded-lg hover:bg-zinc-950">
+              LinkedIn
+            </button>
+            <button class="py-2 bg-zinc-700 rounded-lg hover:bg-zinc-950">
+              Twitter
+            </button>
+            <button class="py-2 bg-zinc-700 rounded-lg hover:bg-zinc-950">
+              Instagram
+            </button>
+          </div>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>
