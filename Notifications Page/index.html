@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            inter: ["Plus Jakarta Sans", "sans-serif"],
+          },
+          colors: {
+            white: "hsl(0, 0%, 100%)",
+            red: "hsl(1, 90%, 64%)",
+            blue: "hsl(219, 85%, 26%)",
+            vlgrayishblue: "hsl(210, 60%, 98%)",
+            lgrayishbluea: "hsl(211, 68%, 94%)",
+            lgrayishblueb: "hsl(205, 33%, 90%)",
+            grayishblue: "hsl(219, 14%, 63%)",
+            dgrayishblue: "hsl(219, 12%, 42%)",
+            vdarkblue: "hsl(224, 21%, 14%)",
+          },
+        },
+      };
+    </script>
+    <title>Frontend Mentor | Notifications page</title>
+  </head>
+  <body>
+    <main>
+      <article
+        class="flex items-center justify-center min-h-screen bg-vlgrayishblue"
+      >
+        <div class="w-3/12 p-4 bg-white rounded-xl">
+          <div class="flex justify-between items-center mb-4">
+            <div class="flex space-x-2">
+              <h1 class="font-bold">Notifications</h1>
+              <div
+                id="notifications-num"
+                class="m-auto font-bold px-2 bg-vdarkblue text-xs text-white rounded-md"
+              >
+                3
+              </div>
+            </div>
+            <a
+              id="notifications-read-all"
+              href="#"
+              class="text-dgrayishblue text-sm hover:text-blue"
+              >Mark all as read</a
+            >
+          </div>
+          <div id="notifications" class="flex flex-col flex-1 space-y-3">
+            <!-- Notification 1 -->
+            <div class="flex space-x-2 px-4 py-2 bg-lgrayishbluea rounded-md">
+              <div class="w-10 p-1">
+                <img
+                  src="assets/images/avatar-mark-webber.webp"
+                  alt=""
+                  class="rounded-full"
+                />
+              </div>
+              <div class="flex flex-col flex-1 text-sm">
+                <div>
+                  <a href="#" class="font-bold text-vdarkblue hover:text-blue"
+                    >Mark Webber</a
+                  ><span class="text-dgrayishblue">
+                    reacted to your recent post</span
+                  >
+                  <a
+                    href="#"
+                    class="font-bold text-dgrayishblue hover:text-blue"
+                    >My first tournament today!</a
+                  >
+                  <div
+                    class="notif-dot w-2 h-2 inline-block bg-red rounded-full animate-pulse"
+                  ></div>
+                </div>
+                <div class="text-dgrayishblue">1m ago</div>
+              </div>
+            </div>
+            <!-- Notification 2 -->
+            <div class="flex space-x-2 px-4 py-2 bg-lgrayishbluea rounded-md">
+              <div class="w-10 p-1">
+                <img
+                  src="assets/images/avatar-angela-gray.webp"
+                  alt=""
+                  class="rounded-full"
+                />
+              </div>
+              <div class="flex flex-col flex-1 text-sm">
+                <div>
+                  <a href="#" class="font-bold text-vdarkblue hover:text-blue"
+                    >Angela Gray</a
+                  ><span class="text-dgrayishblue"> followed you</span>
+                  <div
+                    class="notif-dot w-2 h-2 inline-block bg-red rounded-full animate-pulse"
+                  ></div>
+                </div>
+                <div class="text-dgrayishblue">5m ago</div>
+              </div>
+            </div>
+            <!-- Notification 3 -->
+            <div class="flex space-x-2 px-4 py-2 bg-lgrayishbluea rounded-md">
+              <div class="w-10 p-1">
+                <img
+                  src="assets/images/avatar-jacob-thompson.webp"
+                  alt=""
+                  class="rounded-full"
+                />
+              </div>
+              <div class="flex flex-col flex-1 text-sm">
+                <div>
+                  <a href="#" class="font-bold text-vdarkblue hover:text-blue"
+                    >Jacob Thompson</a
+                  ><span class="text-dgrayishblue"> has joined your group</span>
+                  <a href="#" class="font-bold text-blue">Chess Club</a>
+                  <div
+                    class="notif-dot w-2 h-2 inline-block bg-red rounded-full animate-pulse"
+                  ></div>
+                </div>
+                <div class="text-dgrayishblue">1 day ago</div>
+              </div>
+            </div>
+            <!-- Notification 4 -->
+            <div class="flex space-x-2 px-4 py-2 rounded-md">
+              <div class="w-10 p-1">
+                <img
+                  src="assets/images/avatar-rizky-hasanuddin.webp"
+                  alt=""
+                  class="rounded-full"
+                />
+              </div>
+              <div class="flex flex-col flex-1 text-sm">
+                <div>
+                  <a href="#" class="font-bold text-vdarkblue hover:text-blue"
+                    >Rizky Hasanuddin</a
+                  ><span class="text-dgrayishblue">
+                    sent you a private message</span
+                  >
+                </div>
+                <div class="text-dgrayishblue">5 days ago</div>
+                <a href="#"
+                  ><div
+                    class="my-2 p-3 border border-1 border-lgrayishblueb rounded-md text-dgrayishblue text-base tracking-tight hover:bg-lgrayishbluea"
+                  >
+                    Hello, thanks for setting up the Chess Club. I've been a
+                    member for a few weeks now and I'm already having lots of
+                    fun and improving my game.
+                  </div></a
+                >
+              </div>
+            </div>
+            <!-- Notification 5 -->
+            <div class="flex space-x-2 px-4 py-2 rounded-md">
+              <div class="w-10 p-1">
+                <img
+                  src="assets/images/avatar-kimberly-smith.webp"
+                  alt=""
+                  class="rounded-full"
+                />
+              </div>
+              <div class="flex flex-col flex-1 text-sm">
+                <div>
+                  <a href="#" class="font-bold text-vdarkblue hover:text-blue"
+                    >Kimberly Smith</a
+                  ><span class="text-dgrayishblue">
+                    commented on your picture</span
+                  >
+                </div>
+                <div class="text-dgrayishblue">1 week ago</div>
+              </div>
+              <div
+                class="justify-self-end self-center w-8 rounded-sm hover:border hover:border-lgrayishblueb"
+              >
+                <a href="#"><img src="assets/images/image-chess.webp" /></a>
+              </div>
+            </div>
+            <!-- Notification 6 -->
+            <div class="flex space-x-2 px-4 py-2 rounded-md">
+              <div class="w-10 p-1">
+                <img
+                  src="assets/images/avatar-nathan-peterson.webp"
+                  alt=""
+                  class="rounded-full"
+                />
+              </div>
+              <div class="flex flex-col flex-1 text-sm">
+                <div>
+                  <a href="#" class="font-bold text-vdarkblue hover:text-blue"
+                    >Nathan Peterson</a
+                  ><span class="text-dgrayishblue">
+                    reacted to your recent post</span
+                  >
+                  <span class="font-bold text-dgrayishblue"
+                    >5 end-game strategies to increase your win rate</span
+                  >
+                </div>
+                <div class="text-dgrayishblue">2 weeks ago</div>
+              </div>
+            </div>
+            <!-- Notification 7 -->
+            <div class="flex space-x-2 px-4 py-2 rounded-md">
+              <div class="w-10 p-1">
+                <img
+                  src="assets/images/avatar-anna-kim.webp"
+                  alt=""
+                  class="rounded-full"
+                />
+              </div>
+              <div class="flex flex-col flex-1 text-sm">
+                <div>
+                  <a href="#" class="font-bold text-vdarkblue hover:text-blue"
+                    >Anna Kim</a
+                  ><span class="text-dgrayishblue"> left the group</span>
+                  <span class="font-bold text-dgrayishblue">Chess Club</span>
+                </div>
+                <div class="text-dgrayishblue">2 weeks ago</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>
