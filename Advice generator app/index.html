@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            manrope: ["Manrope", "sans-serif"],
+          },
+          colors: {
+            lightcyan: "hsl(193, 38%, 86%)",
+            neongreen: "hsl(150, 100%, 66%)",
+            grayishblue: "hsl(217, 19%, 38%)",
+            darkgrayishblue: "hsl(217, 19%, 24%)",
+            darkblue: "hsl(218, 23%, 16%)",
+          },
+          backgroundImage: {
+            "mobile-divider": "url('images/pattern-divider-mobile.svg')",
+            "desktop-divider": "url('images/pattern-divider-desktop.svg')",
+            "button-dice": "url('images/icon-dice.svg')",
+          },
+          boxShadow: {
+            button: "0px 0px 35px hsl(193, 38%, 86%)",
+          },
+        },
+      };
+    </script>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Advice generator app</title>
+  </head>
+  <body class="manrope bg-darkblue">
+    <main>
+      <article class="flex items-center justify-center min-h-screen">
+        <div
+          class="flex flex-col items-center relative max-w-[540px] space-y-6 px-6 pt-8 m-8 bg-darkgrayishblue rounded-lg text-center"
+        >
+          <h1 class="text-xs text-neongreen tracking-[4px] font-bold uppercase">
+            advice #<span id="advice-id"></span>
+          </h1>
+          <p id="advice-quote" class="text-lightcyan text-[28px] font-bold"></p>
+          <div
+            class="h-7 w-full bg-mobile-divider bg-contain bg-no-repeat bg-center bg-coverr sm:bg-desktop-divider"
+          ></div>
+          <button
+            id="advice-button"
+            type="button"
+            class="relative -bottom-8 w-16 h-16 bg-button-dice bg-neongreen bg-no-repeat bg-center rounded-full hover:shadow-button hover:shadow-neongreen"
+          ></button>
+        </div>
+      </article>
+    </main>
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>
