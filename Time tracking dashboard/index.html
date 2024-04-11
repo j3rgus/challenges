@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              rubik: ["Rubik", "sans-serif"],
+            },
+            colors: {
+              // Primary
+              blue: "hsl(246, 80%, 60%)",
+              work: "hsl(15, 100%, 70%)", // work
+              play: "hsl(195, 74%, 62%)", // play
+              study: "hsl(348, 100%, 68%)", // study
+              exercise: "hsl(145, 58%, 55%)", // exercise
+              social: "hsl(264, 64%, 52%)", // social
+              "self-care": "hsl(43, 84%, 65%)", // self care
+
+              // Neutral
+              "very-dark-blue": "hsl(226, 43%, 10%)",
+              "dark-blue": "hsl(235, 46%, 20%)",
+              "desaturated-blue": "hsl(235, 45%, 61%)",
+              "pale-blue": "hsl(236, 100%, 87%)",
+            },
+          },
+          backgroundImage: {
+            "work-icon": "url('images/icon-work.svg')",
+            "play-icon": "url('images/icon-play.svg')",
+            "study-icon": "url('images/icon-study.svg')",
+            "exercise-icon": "url('images/icon-exercise.svg')",
+            "social-icon": "url('images/icon-social.svg')",
+            "self-care-icon": "url('images/icon-self-care.svg')",
+          },
+        },
+      };
+    </script>
+    <title>Frontend Mentor | Time tracking dashboard</title>
+  </head>
+  <body class="rubik bg-very-dark-blue text-white">
+    <main>
+      <article class="flex min-h-screen items-center justify-center">
+        <div id="cards" class="grid grid-cols-1 gap-8 p-5 md:grid-cols-4">
+          <!-- First col/row, account report -->
+          <div class="flex flex-col row-span-2 bg-dark-blue rounded-2xl">
+            <div
+              class="flex flex-row items-center gap-4 p-8 rounded-2xl bg-blue md:flex-col md:items-start"
+            >
+              <div class="w-24 border-4 border-white rounded-full">
+                <img
+                  src="images/image-jeremy.png"
+                  alt="image-jeremy"
+                  class="object-contain"
+                />
+              </div>
+              <div>
+                <h1 class="text-pale-blue">Report for</h1>
+                <p class="text-4xl font-medium">Jeremy Robson</p>
+              </div>
+            </div>
+            <ul
+              id="timeframes-links"
+              class="flex flex-row justify-between p-8 gap-5 text-lg text-pale-blue md:flex-col"
+            >
+              <li><a href="#daily" class="hover:text-white">Daily</a></li>
+              <li><a href="#weekly" class="hover:text-white">Weekly</a></li>
+              <li><a href="#monthly" class="hover:text-white">Monthly</a></li>
+            </ul>
+          </div>
+          <!-- Cards -->
+        </div>
+      </article>
+    </main>
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>
