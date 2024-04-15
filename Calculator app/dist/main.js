@@ -84,8 +84,9 @@ class App {
             case ".":
                 this.screen += ".";
                 break;
+            case "Backspace":
             case "del":
-                this.screen = "";
+                this.screen = this.screen.slice(0, -1);
                 break;
             case "+":
             case "add":
@@ -119,7 +120,7 @@ class App {
             case "Enter":
             case "result":
                 this.screen = this.operator
-                    ? this.operator(this.result, +this.screen)
+                    ? this.operator(this.result, +this.screen).toString()
                     : this.screen;
                 break;
         }
