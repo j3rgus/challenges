@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Calculator app</title>
+  </head>
+  <body class="bg-main">
+    <article class="flex items-center justify-center min-h-screen">
+      <div class="calc">
+        <!-- Header -->
+        <div class="calc-header">
+          <h1 class="font-extrabold text-lg">calc</h1>
+          <div class="flex items-center space-x-4">
+            <p class="font-semibold text-xs uppercase">theme</p>
+            <div id="calc-toggle" class="calc-toggle">
+              <div data-value="theme-1" class="calc-toggle-state">
+                <span class="calc-toggle-label">1</span>
+              </div>
+              <div data-value="theme-2" class="calc-toggle-state">
+                <span class="calc-toggle-label">2</span>
+              </div>
+              <div data-value="theme-3" class="calc-toggle-state">
+                <span class="calc-toggle-label">3</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Screen -->
+        <div id="calc-screen" class="calc-screen"></div>
+        <!-- Keypad -->
+        <div id="calc-keypad" class="calc-keypad">
+          <div class="calc-key-num" data-key="7">7</div>
+          <div class="calc-key-num" data-key="8">8</div>
+          <div class="calc-key-num" data-key="9">9</div>
+          <div class="calc-key-del" data-key="del">del</div>
+
+          <div class="calc-key-num" data-key="4">4</div>
+          <div class="calc-key-num" data-key="5">5</div>
+          <div class="calc-key-num" data-key="6">6</div>
+          <div class="calc-key-op" data-key="add">&plus;</div>
+
+          <div class="calc-key-num" data-key="1">1</div>
+          <div class="calc-key-num" data-key="2">2</div>
+          <div class="calc-key-num" data-key="3">3</div>
+          <div class="calc-key-op" data-key="sub">&minus;</div>
+
+          <div class="calc-key-num" data-key=".">.</div>
+          <div class="calc-key-num" data-key="0">0</div>
+          <div class="calc-key-num" data-key="divide">/</div>
+          <div class="calc-key-op" data-key="multi">&times;</div>
+
+          <div class="calc-key-reset" data-key="reset">reset</div>
+          <div class="calc-key-equal" data-key="result">=</div>
+        </div>
+      </div>
+    </article>
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>

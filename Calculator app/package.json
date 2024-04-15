@@ -1,0 +1,15 @@
+{
+  "name": "calculator-app",
+  "version": "1.0.0",
+  "description": "Calcualtor App",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss -i ./css/tailwind-input.css -o ./dist/style.css",
+    "watch": "tailwindcss -i ./css/tailwind-input.css -o ./dist/style.css --watch"
+  },
+  "author": "Jergus Lysy",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.3"
+  }
+}
