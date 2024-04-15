@@ -1,6 +1,6 @@
 class App {
     constructor() {
-        this.screen = "";
+        this.screen = "399981";
         this.operator = null;
         this.result = 0;
 
@@ -50,7 +50,7 @@ class App {
     displayScreen() {
         const screenEl = document.getElementById("calc-screen");
 
-        screenEl.textContent = (+this.screen).toLocaleString("us-US");
+        screenEl.textContent = (+this.screen).toLocaleString("en-US");
     }
     55;
     processToggle(e) {
